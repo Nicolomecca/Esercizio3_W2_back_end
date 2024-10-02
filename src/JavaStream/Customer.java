@@ -12,16 +12,5 @@ public class Customer {
         this.tier = tier;
     }
 
-    // Getter
-    public long getId() {
-        return id;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public Integer getTier() {
-        return tier;
-    }
 }

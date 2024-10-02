@@ -15,9 +15,7 @@ public class Product {
     }
 
     // Getter
-    public long getId() {
-        return id;
-    }
+  
 
     public String getName() {
         return name;
