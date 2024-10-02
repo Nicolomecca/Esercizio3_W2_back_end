@@ -25,6 +25,8 @@ public class Main {
 
         // Stampo i risultati
         filteredProducts.forEach(p -> System.out.println(p.getName()));
+
+
         //-----------Secondo esercizio---------------
         System.out.println("Secondo  esercizio");
         // Creo la lista di ordini
@@ -51,6 +53,7 @@ public class Main {
 
         //-----------3 Esercizio--------
         System.out.println("Esercizio 3");
+        System.out.println("Esercizio 3");
         // Crea una lista di prodotti
         List<Product> productsBoys = new ArrayList<>();
         productsBoys.add(new Product(1, "Action Figure", "Boys", 20.0));
@@ -58,18 +61,14 @@ public class Main {
         productsBoys.add(new Product(3, "Toy Car", "Boys", 30.0));
         productsBoys.add(new Product(4, "Building Blocks", "Children", 25.0));
 
-        // Filtra i prodotti della categoria "Boys" e applica uno sconto del 10%
+        // Creo la lista dove inserisco i prodotti scontati
         List<Product> discountedBoysProducts = new ArrayList<>();
 
         for (Product product : productsBoys) {
             if (product.getCategory().equals("Boys")) {
-                double discountedPrice = product.getPrice() * 0.9; // Applica il 10% di sconto
-                discountedBoysProducts.add(new Product(
-                        product.getId(),
-                        product.getName(),
-                        product.getCategory(),
-                        discountedPrice
-                ));
+                double discountedPrice = product.getPrice() * 0.9; // Applico il 10% di sconto
+                product.setPrice(discountedPrice);
+                discountedBoysProducts.add(product);
             }
         }
 
@@ -80,5 +79,7 @@ public class Main {
         }
     }
 }
+
+
 
 

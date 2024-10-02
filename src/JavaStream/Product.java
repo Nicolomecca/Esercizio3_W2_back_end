@@ -30,4 +30,9 @@ public class Product {
     public double getPrice() {
         return price;
     }
+
+    // Metodo setPrice
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }
